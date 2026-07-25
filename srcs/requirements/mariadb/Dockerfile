@@ -13,8 +13,5 @@ COPY tools/mariadb-script.sh /usr/local/bin/mariadb-script.sh
 # Donner les droits d'exécution au script
 RUN chmod +x /usr/local/bin/mariadb-script.sh
 
-# Documenter le port utilisé
-EXPOSE 3306
-
 # Lancement du script au démarrage du conteneur
 ENTRYPOINT ["/usr/local/bin/mariadb-script.sh"]
