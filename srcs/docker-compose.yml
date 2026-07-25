@@ -11,7 +11,7 @@ services:
     volumes:
       - mariadb_data:/var/lib/mysql
     networks:
-      -inception_network
+      - inception_network
     expose:
       - "3306"
   
