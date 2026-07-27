@@ -1,9 +1,9 @@
-FROM debian:bullseye
+FROM debian:bookworm
 
 # Installation de MariaDB et nettoyage du cache APT
-RUN apt-get update -y && \
-    apt-get upgrade -y && \
-    apt-get install -y mariadb-server mariadb-client && \
+RUN apt-get update -y && apt-get upgrade -y
+
+RUN apt-get install -y mariadb-server mariadb-client && \
     rm -rf /var/lib/apt/lists/*
 
 # Copie de la configuration et du script

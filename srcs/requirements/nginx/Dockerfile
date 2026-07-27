@@ -1,9 +1,9 @@
-FROM debian:bullseye
+FROM debian:bookworm
 
 # Installation de NGINX et OpenSSL
-RUN apt-get update -y && \
-    apt-get upgrade -y && \
-    apt-get install -y nginx openssl && \
+RUN apt-get update -y && apt-get upgrade -y
+
+RUN apt-get install -y nginx openssl && \
     rm -rf /var/lib/apt/lists/*
 
 # Copie de la configuration NGINX
