@@ -95,7 +95,7 @@ Docker volumes are managed directly by Docker within a dedicated host directory.
 Bind mounts are directories on the host's machine that are directly mounted into the container file system.
 They are accessible and modifiable by the host's user.
 
-The project requires bind mounts placed inside `/home/$USER/data` for file visibility on the VM. 
+The project requires named Docker volumes with drivers configured to be pointing to `/home/$USER/data` for file visibility on the VM. 
 
 ## Instructions
 
